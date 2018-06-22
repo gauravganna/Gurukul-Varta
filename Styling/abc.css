@@ -98,7 +98,7 @@ nav.mobile ul.active{
 	.hamburger-btn .fa-window-close-o {
 		position: fixed;
 		left: 15px;
-		top: 161px;
+		top: 165px;
 		font-size: 35px;
 		cursor: pointer;
 		color: #f4eb42;
@@ -231,7 +231,7 @@ ul li:hover .slider p {
 
 	.hamburger-btn .fa-bars,
 	.hamburger-btn .fa-window-close-o {
-		top: 106px;
+		top: 110px;
 	}
 
 }
