@@ -10,7 +10,8 @@
 
 	<link rel="stylesheet" type="text/css" href="Styling/abc.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+	<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
+
 	<!-- Include JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script >
@@ -34,7 +35,7 @@
 
 		/* The following function fixes the navigation bar on the top on scrolling */
 		$(window).scroll(function(){
-			if($(document).scrollTop() > 130 && $(window).width() > 1050) {
+			if($(document).scrollTop() > 220 && $(window).width() > 1050) {
 				$("nav.desktop").addClass("scroll");
 			}
 			else {
@@ -171,10 +172,28 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 	</section>
 	<footer>
 		<div class="footer">
+			<p class="footerHeader">About Gurukul Varta</p> 
+			<div class="underline"></div>
+			<div id="about">Gurukul Varta is the monthly newsletter issued by IIT Goa.</div>
 		</div>
 		<div class="footer">
+			<p class="footerHeader">Contact Us</p>
+			<div class="underline"></div>
+			<p id="mail">Email:</p>
+			<a> gv@iitgoa.ac.in </a>
+			<p id="editor">Chief Editor</p>
+			<p id="editorInfo">Neha Shah +91987654321</p>
+
 		</div>
 		<div class="footer">
+			<p class="footerHeader">Stay Connected</p>
+			<div class="underline"></div>
+			<div id="social">
+				<img src="Images/facebook.png"/>
+				<img src="Images/twitter.png"/>
+				<img src="Images/youtube.png"/>
+				<img src="Images/instagram.png"/>
+			</div>
 		</div>	
 		<div class="copyright">
 			<p> Copyright © 2018. All Rights Reserved | Website Designed by Gaurav Ganna</p>
