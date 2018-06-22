@@ -21,18 +21,20 @@
 			$(".hamburger-btn .fa-bars").click(function(){
 				$(this).hide();
 				$(".hamburger-btn .fa-window-close-o").show();
+				$("section.mainBody").addClass("active");
 				$("nav.mobile ul").addClass("active");
 			});
 			$(".hamburger-btn .fa-window-close-o").click(function(){
 				$(this).hide();
 				$(".hamburger-btn .fa-bars").show();
+				$("section.mainBody").removeClass("active");
 				$("nav.mobile ul").removeClass("active");
 			});
 		});
 
 		/* The following function fixes the navigation bar on the top on scrolling */
 		$(window).scroll(function(){
-			if($(document).scrollTop() > 160 && $(window).width() > 1050) {
+			if($(document).scrollTop() > 130 && $(window).width() > 1050) {
 				$("nav.desktop").addClass("scroll");
 			}
 			else {
@@ -58,9 +60,13 @@
 <body>
 
 	<header id="banner">	
-		<a href="#"><img src="Images/banner.jpeg" alt="Gurukul Varta"></a>
+		<a href="#"><img src="Images/banner.jpeg" alt="Gurukul Varta">
+			<div class="lineBelowBanner"></div> 
+			<div class="heading">
+				<p>The IIT Goa Campus Newsletter</p>
+			</div>	
+		</a>
 	</header>
-	
 	<!-- Navigation Buttons -->
 	<!-- Desktop Version -->
 	<nav class="desktop">
@@ -97,7 +103,7 @@
 	<!-- Navigation Buttons -->
 
 	<!-- Social Media Floating Sidebar-->
-	<div class="wrapper">
+	<!-- <div class="wrapper">
   		<ul>
     		<li class="facebook">
       			<i class="fa fa-facebook" aria-hidden="true"></i>
@@ -127,10 +133,10 @@
       			</div>
     		</li>
   		</ul>
-	</div>
+	</div> -->
 	<!-- Social Media Floating Sidebar-->
 
-	<section>
+	<section class="mainBody">
 		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 Why do we use it?
 
@@ -163,7 +169,17 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
 
 	</section>
-	<footer></footer>	
+	<footer>
+		<div class="footer">
+		</div>
+		<div class="footer">
+		</div>
+		<div class="footer">
+		</div>	
+		<div class="copyright">
+			<p> Copyright © 2018. All Rights Reserved | Website Designed by Gaurav Ganna</p>
+		</div>
+	</footer>
 </body>
 
 </html>
