@@ -6,7 +6,6 @@
 #banner {
 	background-color: white;
 	text-align: center;
-
 }
 
 #banner img {
@@ -19,28 +18,26 @@
 
 /* Navigation Bar*/
 nav.desktop,
-nav.mobile {
+nav.mobile,
+.hamburger-btn {
 	background-color: orange;
 	height: 40px;
-	box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.2);
 	width: 100%;
-	/*position: fixed;*/
-	top: 160px;
-	left: 0px;
 	line-height: 40px;
+	margin-bottom: 0px;
+}
+
+nav.desktop.scroll {
+	position: fixed;
+	top: 0px;
 }
 
 nav.mobile,
 .hamburger-btn {
 	display: none;
-	transition: top 1.2s ease-out;
+	transition: top 1.2s ease-out;		/*When Screen Size goes to mobile version*/
 }
 
-.hamburger-btn .fa-bars,
-.hamburger-btn .fa-window-close-o {
-	transition: top 1.2s ease-out,
-				display 1s ease;
-}
 
 nav.desktop ul {
 	background-color: orange;
@@ -73,6 +70,7 @@ nav.desktop li:hover,nav.mobile li:hover {
 }
 
 nav.mobile ul {
+	background-color: orange;
 	display: none;
 }
 
@@ -80,6 +78,7 @@ nav.mobile ul.active{
 	display: block;
 }
 
+/*Media Query to change from mobile to desktop version and vice-versa*/
 @media screen and (max-width: 1050px) {
 	nav.desktop {
 		display: none;
@@ -91,29 +90,25 @@ nav.mobile ul.active{
 	}
 
 	.hamburger-btn {
-		position: relative;
+		padding-left: 15px;
+		box-sizing: border-box;
 	}
 
 	.hamburger-btn .fa-bars,
 	.hamburger-btn .fa-window-close-o {
-		position: fixed;
-		left: 15px;
-		top: 165px;
+		margin-top: 2.5px;
 		font-size: 35px;
 		cursor: pointer;
 		color: #f4eb42;
 	}
 
-	nav.mobile ul {
-		margin-top: 40px;
-		background-color: orange;
-	}
 
 	nav.mobile ul li {
 		list-style: none;
 		text-align: center;
 		padding: 0px 20px;
 		color: white;
+		/*Add Border Around */
 	}
 
 }
@@ -122,7 +117,7 @@ nav.mobile ul.active{
 /*Social Media*/
 .wrapper {
 	position: fixed;
-	top: 40%;
+	top: 35%;
 	right: 0%;
 	z-index: 2;
 
@@ -214,6 +209,7 @@ ul li:hover .slider p {
 	transition: all 1s 0.2s ease;
 }
 
+/*Add Media Query to change banner size in mobile version*/
 @media screen and (max-width: 600px) {
 	.wrapper {
 		display: none;
