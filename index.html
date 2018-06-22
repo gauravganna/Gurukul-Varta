@@ -1,6 +1,118 @@
-<!doctype HTML>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
-	<title> Gaurav Ganna </title>
+	<meta charset="utf-8">
+	<!-- This is to warn browser to scale content based on the size of the screen-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale="1">
+
+	<title>Gurukul Varta</title>
+	<script type="text/javascript" ></script>
+	<link rel="stylesheet" type="text/css" href="Styling/abc.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$(".hamburger-btn .fa-window-close-o").hide();
+
+			$(".hamburger-btn .fa-bars").click(function(){
+				$(this).hide();
+				$(".hamburger-btn .fa-window-close-o").show();
+				$("nav.mobile ul").addClass("active");
+			});
+			$(".hamburger-btn .fa-window-close-o").click(function(){
+				$(this).hide();
+				$(".hamburger-btn .fa-bars").show();
+				$("nav.mobile ul").removeClass("active");
+			});
+		});
+	</script>
+	<!-- The follwing lines are used to config favicon for different browsers and screen settings. -->
+	<link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+	<link rel="manifest" href="Favicon/site.webmanifest">
+	<link rel="mask-icon" href="Favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="Favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="Favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<!-- It ends here.-->
+
 </head>
+
+<body>
+	<header id="banner">
+		<a href="#"><img src="Images/banner.jpeg" alt="Gurukul Varta"></a>
+	</header>
+	<!-- Navigation Buttons -->
+	<nav class="desktop">
+		<ul>
+			<li><a href="#" >Insti News</a></li>
+			<li><a href="#" >Academics</a></li>
+			<li><a href="#" >Upcoming Events</a></li>
+			<li><a href="#" >Extra Curriculars</a></li>
+			<li><a href="#" >Op Eds</a></li>
+			<li><a href="#" >Career</a></li>
+			<li><a href="#" >Other Stuff</a></li>
+			<li><a href="#" >About Us</a></li>
+			<li><a href="#" >Print Edition</a></li>
+		</ul>
+	</nav>
+
+	<nav class="mobile">
+		<div class="hamburger-btn">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+			<i class="fa fa-window-close-o" aria-hidden="true"></i>
+		</div>
+		<ul>
+			<li><a href="#" >Insti News</a></li>
+			<li><a href="#" >Academics</a></li>
+			<li><a href="#" >Upcoming Events</a></li>
+			<li><a href="#" >Extra Curriculars</a></li>
+			<li><a href="#" >Op Eds</a></li>
+			<li><a href="#" >Career</a></li>
+			<li><a href="#" >Other Stuff</a></li>
+			<li><a href="#" >About Us</a></li>
+			<li><a href="#" >Print Edition</a></li>
+		</ul>
+	</nav>
+	<!-- Navigation Buttons -->
+
+	<!-- Social Media -->
+	<div class="wrapper">
+  		<ul>
+    		<li class="facebook">
+      			<i class="fa fa-facebook" aria-hidden="true"></i>
+      			<div class="slider">
+        			<p>Like Us!</p>
+      			</div>
+    		</li>
+    
+    		<li class="twitter">
+      			<i class="fa fa-twitter" aria-hidden="true"></i>
+      			<div class="slider">
+        			<p>Follow Us!</p>
+      			</div>
+    		</li>
+    
+    		<li class="instagram">
+      			<i class="fa fa-instagram" aria-hidden="true"></i>
+      			<div class="slider">
+        			<p>Follow Us!</p>
+      			</div>
+    		</li>
+    
+    		<li class="youtube">
+     			<i class="fa fa-youtube" aria-hidden="true"></i>
+      			<div class="slider">
+        			<p>Subscribe!</p>
+      			</div>
+    		</li>
+  		</ul>
+	</div>
+	<!-- Social Media -->
+	<section></section>
+	<footer></footer>	
+</body>
+
 </html>
