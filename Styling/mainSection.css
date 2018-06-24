@@ -1,0 +1,154 @@
+.mainArticle {
+	width: 100%;
+	height: 450px;
+	display: inline-block;
+	box-sizing: border-box;
+	flex-wrap: wrap-reverse; 
+	/*vertical-align: baseline;*/
+}
+
+.left,
+.right {
+	float: left;
+	/*vertical-align: baseline;*/
+	/*border: 1px solid;*/
+	box-sizing: border-box;
+	height: 100%;
+	width: 50%;
+	transition: all 0.5s ease;
+}
+
+.left {
+	/*flex-shrink: 1;
+	flex-grow: 1;*/
+	padding: 30px;
+}
+
+.right {
+	padding: 20px;
+	position: relative;
+	/*display: block;*/
+/*	flex-grow: 0;
+	flex-shrink: 0;*/
+}
+
+.right img {
+	position: relative;
+	box-sizing: border-box;
+	box-shadow: 5px 5px 6px rgba(242,125,12,0.8);
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+	/*display: block;*/
+	border-radius: 10px;
+}
+
+#heading {
+	/*display: block;*/
+	/*height: 100px;*/
+	font-size: 40px;
+	font-family: serif;
+	font-weight: 700;
+	line-height: 1.3;
+	/*border: 1px solid;*/
+}
+
+#subHeading {
+	/*height: 45px;*/
+	margin-top: 10px;
+	font-size: 15px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	line-height: 22.5px;
+	/*border: 1px solid;*/
+}
+
+#detail {
+	margin-top: 20px;
+	padding-right: 10px;
+	font-size: 14px;
+	font-family: sans-serif;
+	/*border: 1px solid;*/
+	line-height: 1.5;
+	/*overflow: hidden;*/
+
+}
+
+#readMore {
+	display: inline-block;
+	border-radius: 5px;
+	padding: 12.5px; 
+	text-decoration: none;
+	color: #f27d0c;
+	margin-top: 20px;
+	border: 2px solid #f27d0c;
+}
+
+#lineBelowArticle {
+	margin-top: 20px;
+	border: 1.5px solid #f27d0c;
+	transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 950px) and (min-width: 600px) {
+	.left,
+	.right {
+		width: 100%;
+		float: none;
+		/*border: 1px solid;*/
+		height: auto; 
+	}
+
+	.left {
+		padding: 40px; 
+	}
+
+	.right {
+		padding: 30px;
+	}
+
+	#lineBelowArticle {
+		margin-top:  40px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.mainBody {
+		margin: 20px;
+	}
+
+	.left,
+	.right {
+		width: 100%;
+		float: none;
+		height: auto;
+		padding: 5px; 
+	}
+
+	#heading {
+		padding: 0px;
+		font-size: 34px;
+		line-height: 1.1; 
+	}
+
+	#subHeading {
+		padding: 0px;
+		line-height: 1.1;
+		font-size: 15px;
+	}
+
+	#detail {
+		padding: 0px;
+		line-height: 1.3;
+	}
+
+	#readMore {
+		margin: 20px 0px;
+	}
+
+	#lineBelowArticle {
+		margin-top:  40px;
+	}
+
+}

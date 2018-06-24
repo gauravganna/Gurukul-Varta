@@ -1,6 +1,8 @@
 * {
 	margin: 0px;
 	padding: 0px;
+	min-height: 0;
+	min-width: 0;
 }
 
 #banner {
@@ -35,6 +37,7 @@ nav.mobile,
 nav.desktop.scroll {
 	position: fixed;
 	top: 0px;
+	z-index: 5;
 }
 
 nav.mobile,
@@ -108,7 +111,7 @@ section.mainBody.active {
 		margin-top: 2.5px;
 		font-size: 35px;
 		cursor: pointer;
-		color: #f4eb42;
+		color: #f27d0c;
 	}
 
 
@@ -117,9 +120,9 @@ section.mainBody.active {
 		text-align: center;
 		padding: 0px 20px;
 		color: white;
+		background-color: #757676;
 		/*Add Border Around */
 	}
-
 }
 /*Navigation Bar*/
 
@@ -143,8 +146,8 @@ section.mainBody.active {
 }
 
 .mainBody {
-	margin: 20px;
-	transition: margin 0.5s ease;
+	margin: 30px;
+	transition: margin-top 0.5s ease;
 }
 
 
@@ -371,6 +374,3 @@ ul li:hover .slider p {
 	}
 }
 /*Social Media*/
-
-
-
