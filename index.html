@@ -40,12 +40,12 @@
 			month = monthNames[n.getMonth()];
 			date = n.getDate();
 			day = weekday[n.getDay()];
-			document.getElementById("date").innerHTML = day + " " + month + " " + date + ", " + year;
+			document.getElementById("date").innerHTML = day + "   " + month + " " + date + ", " + year;
 		});
 
 		/* The following function fixes the navigation bar on the top on scrolling */
 		$(window).scroll(function(){
-			if($(document).scrollTop() > 220 && $(window).width() > 1050) {
+			if($(document).scrollTop() > 246 && $(window).width() > 1050) {
 				$("nav.desktop").addClass("scroll");
 			}
 			else {
@@ -185,7 +185,7 @@
 				<a id="readMore" href="#">Read More>> </a>
 			</div>
 			<div class="right">
-				<img src="Images/sample.png"/>
+				<div class="image"></div>
 			</div>
 		</div>
 		<div id="lineBelowArticle"></div>
