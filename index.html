@@ -10,7 +10,7 @@
 
 	<link rel="stylesheet" type="text/css" href="Styling/abc.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
 	<link rel="stylesheet" type="text/css" href="Styling/mainSection.css">
 	<!-- Include JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -25,12 +25,22 @@
 				$("section.mainBody").addClass("active");
 				$("nav.mobile ul").addClass("active");
 			});
+
 			$(".hamburger-btn .fa-window-close-o").click(function(){
 				$(this).hide();
 				$(".hamburger-btn .fa-bars").show();
 				$("section.mainBody").removeClass("active");
 				$("nav.mobile ul").removeClass("active");
 			});
+
+			const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+			const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+			var n = new Date();
+			year = n.getFullYear();
+			month = monthNames[n.getMonth()];
+			date = n.getDate();
+			day = weekday[n.getDay()];
+			document.getElementById("date").innerHTML = day + " " + month + " " + date + ", " + year;
 		});
 
 		/* The following function fixes the navigation bar on the top on scrolling */
@@ -42,6 +52,7 @@
 				$("nav.desktop").removeClass("scroll");
 			}
 		});
+
 		var flag=true;
 		$(window).resize(function(){
 			if($(this).width() <= 950) {
@@ -78,7 +89,16 @@
 </head>
 
 <body>
-
+	<header id="aboveBanner">
+		<div id="date">
+		</div>
+		<div class="search-container">
+    		<form action="/action_page.php">
+      			<input type="text" placeholder="Search.." name="search"/>
+      			<button type="submit"><i class="fa fa-search"></i></button>
+    		</form>
+  		</div>
+	</header>
 	<header id="banner">	
 		<a href="#"><img src="Images/banner.jpeg" alt="Gurukul Varta">
 			<div class="lineBelowBanner"></div> 
