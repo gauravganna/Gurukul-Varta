@@ -15,8 +15,9 @@
 	<!-- Include JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script >
-		/* The following function switches bar and cross and displays unordered list when bar is clicked*/
+		
 		$(document).ready(function(){
+			/* The following function switches bar and cross and displays unordered list when bar is clicked*/
 			$(".hamburger-btn .fa-window-close-o").hide();
 
 			$(".hamburger-btn .fa-bars").click(function(){
@@ -33,6 +34,7 @@
 				$("nav.mobile ul").removeClass("active");
 			});
 
+			/*The following part retrieves Date and Time*/
 			const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
 			const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 			var n = new Date();
@@ -41,37 +43,28 @@
 			date = n.getDate();
 			day = weekday[n.getDay()];
 			document.getElementById("date").innerHTML = day + "   " + month + " " + date + ", " + year;
+
+			/*The following part gives the sliding effect*/
+			var slideIndex = 0;
+			carousel();
+
+			function carousel(){
+				var x = document.getElementsByClassName("mainArticle");
+				var y = document.getElementsByClassName("dot");
+				for(var i=0;i<x.length;i++){
+					x[i].style.display = "none";
+					y[i].style.backgroundColor = "#ff9f80";
+				}
+				slideIndex++;
+				if( slideIndex > x.length ){ 
+					slideIndex = 1;
+				}
+				x[slideIndex-1].style.display = "flex";
+				y[slideIndex-1].style.backgroundColor = "#f27d0c";
+				setTimeout(carousel,2500);
+		}
 		});
 
-		/* The following function fixes the navigation bar on the top on scrolling */
-		$(window).scroll(function(){
-			if($(document).scrollTop() > 246 && $(window).width() > 1050) {
-				$("nav.desktop").addClass("scroll");
-			}
-			else {
-				$("nav.desktop").removeClass("scroll");
-			}
-		});
-
-		var flag=true;
-		$(window).resize(function(){
-			if($(this).width() <= 950) {
-				if(flag) {
-					var left = $('.left').clone();
-					$('.mainArticle').find('.left').remove();
-					$('.mainArticle').append(left);
-					flag=false;
-				}
-			}
-			else{
-				if(!flag){
-					var right = $('.right').clone();
-					$('.mainArticle').find('.right').remove();
-					$('.mainArticle').append(right);
-					flag=true;
-				}
-			}
-		});
 	</script>
 
 	<!-- The follwing lines are used to config favicon for different browsers and screen settings. -->
@@ -177,16 +170,45 @@
 	<!-- Social Media Floating Sidebar-->
 
 	<section class="mainBody">
-		<div class="mainArticle">
+		<div class="mainArticle" id="article1">
 			<div class="left">
 				<h1 id="heading">From The Desk of Director</h1>
 				<h5 id="subHeading">Excerpt from an interview with Dr. b. k. mishra, director, iit goa</h5>
 				<p id="detail">Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-				<a id="readMore" href="#">Read More>> </a>
+				<a id="readMore" href="#">Read More ..   </a>
 			</div>
 			<div class="right">
-				<div class="image"></div>
+				<img src="Images/article_1.png" alt=" ">
 			</div>
+		</div>
+
+		<div class="mainArticle" id="article2">
+			<div class="left">
+				<h1 id="heading">National Unity Day</h1>
+				<h5 id="subHeading">31st October, 2017</h5>
+				<p id="detail">This day marked the birth anniversary of Sardar Vallabhbhai Patel,the Ironman of India. We paid homage to this great man who is responsible for stringing together the India we know today. Had it not been for the determination and strong resolve to unite the nation, India would have been split into numerous princely states. </p>
+				<a id="readMore" href="#">Read More ..   </a>
+			</div>
+			<div class="right">
+				<img src="Images/article_2.png" alt=" ">
+			</div>
+		</div>
+
+		<div class="mainArticle" id="article3">
+			<div class="left">
+				<h1 id="heading">4th International Yoga Day</h1>
+				<h5 id="subHeading">21st June,2018</h5>
+				<p id="detail">4th International Day of Yoga was celebrated with great enthusiasm by the students, staffs and faculties of IIT Goa on 21 st June 2018. The event started with welcome speech by Dr. Sachin Kore, Dean (Student Affairs), followed by Director's address to the participants. Yoga Instructor Mr. Manmohan Sewda, Jr. Assistant, IIT Goa, demonstrated 19 different yoga asanas.</p>
+				<a id="readMore" href="#">Read More ..   </a>
+			</div>
+			<div class="right">
+				<img src="Images/article_3.png" alt=" ">
+			</div>
+		</div>
+		<div class="dot-container">
+			<div id="dot1" class="dot"></div>
+			<div id="dot2" class="dot"></div>
+			<div id="dot3" class="dot"></div>
 		</div>
 		<div id="lineBelowArticle"></div>
 

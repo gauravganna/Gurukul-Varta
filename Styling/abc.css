@@ -79,10 +79,10 @@ nav.mobile,
 	margin-bottom: 0px;
 }
 
-nav.desktop.scroll {
-	position: fixed;
+nav.desktop {
+	position: sticky;
 	top: 0px;
-	z-index: 5;
+	z-index: 10;
 }
 
 nav.mobile,
