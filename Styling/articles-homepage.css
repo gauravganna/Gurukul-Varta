@@ -1,11 +1,10 @@
 .trending-articles-container {
-	width: 75%;
-	display: flex;
+	width: 100%;
+	display: inline-flex;
 	flex-wrap: wrap;
 	box-sizing: border-box;
 	height: 600px;
 	color: #fff;
-	border: black 1px solid;
 	transition: width 0.5s ease;
 	cursor: pointer;
 }
@@ -20,7 +19,7 @@
 }
 
 .trending-articles-container .image .color {
-	opacity: 0.9;
+	opacity: 0.925;
 	height: 100%;
 	width: 100%;
 	transition: opacity 1s ease;
@@ -137,10 +136,6 @@
 }
 
 @media screen and (max-width: 950px) {
-	.trending-articles-container {
-		width: 100%;
-	}
-
 	.trending-articles-container .header h3 {
 		padding: 0% 1px;
 		font-size: 1.35em;
@@ -156,22 +151,113 @@
 }
 
 @media screen and (max-width: 600px) {
-	.trending-articles-container {
-		height: 400px;
-	}
-
-	.trending-articles-container .header {
-		padding: 0px 2px;
+	.trending-articles-container .image {
+		width: 50%;
+		height: 25%;
 	}
 
 	.trending-articles-container .header h3 {
-		padding: 0% 1px;
-		font-size: 1.05em;
+		font-size: 1.35em;
 		line-height: 1.2;
-		letter-spacing: 0.015em;
 	}
 
 	.trending-articles-container .header p {
 		display: none;
+	}
+
+	#nine {
+		display: none;
+	}
+}
+
+
+/*Below Main Section*/ 
+.belowMainArticle {
+	display: inline-flex;
+}
+
+.leftSide {
+	width: 75%;
+	box-sizing: border-box;
+	height: auto;
+}
+
+.rightSide {
+	margin: 0px 0px 0px 20px;
+	width: 25%;
+	/*border: blue 1px solid;*/
+	box-sizing: border-box;
+	height: auto;
+}
+
+.print-edition {
+	height: auto;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+
+.rightSide .header {
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-weight: 700;
+	color: #f27d0c;
+	box-shadow: 0px 5px 4px rgba(0,0,0,0.2);
+	text-transform: uppercase;
+	font-size: 18px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.printed-version-image {
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.email-subscription-container {
+	height: auto;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	/*padding: 0px 10px 10px 10px;*/
+	border: black 0.5px solid;
+	margin: 10px;
+}
+
+.email-subscription-container p {
+	margin: 6px 4px;
+	font-size: 16.6px;
+}
+
+.email-subscription-container input[type=text] {
+	padding: 6px;
+	border-radius: 2px;
+	border: 1px solid;
+	margin: 6px 4px;
+}
+
+.email-subscription-container input[type=submit] {
+	margin: 6px 4px;
+	border-radius: 0px;
+	border: 0px solid;
+	background-color: #f27d0c;
+	padding: 6px;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+	.belowMainArticle {
+		display: block;
+	}
+
+	.leftSide {
+		width: 100%;
+	}
+
+	.rightSide {
+		margin: 20px 0px; 
 	}
 }

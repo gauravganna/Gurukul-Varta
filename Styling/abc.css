@@ -193,6 +193,7 @@ section.mainBody.active {
 .mainBody {
 	margin: 30px;
 	transition: margin-top 0.5s ease;
+	box-sizing: border-box;
 }
 
 
@@ -297,108 +298,8 @@ section.mainBody.active {
 	}
 }
 
-
-/*Social Media*/
-/*.wrapper {
-	position: fixed;
-	top: 35%;
-	right: 0%;
-	z-index: 2;
-
-}
-
-.wrapper li {
-	position: relative;
-	width: 40px;
-	height: 40px;
-	background: #e59500;
-	list-style: none;
-	margin : 1px 0px;
-	cursor: pointer;
-	border-radius: 8px 0px 0px 8px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-ul li .fa {
-	z-index: 1;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-60%,-50%);
-	font-size: 20px;
-	color: #fff;
-}
-
-ul .facebook {
-	background-color: #3b5998;
-}
-
-ul .twitter {
-	background-color: #1da1f2;
-}
-
-ul .instagram {
-	background-color: #c32aa3;
-}
-
-ul .youtube {
-	background-color: #ff0000;
-}
-
-.slider {
-	background: #eebb5c;
-	position: absolute;
-	top: 0;
-	right: 40.5px;
-	width: 0px;
-	height: 40px;
-	border-radius: 3px;
-	transition: all 0.5s 0.3s ease;
-}
-
-.slider p {
-	font-family: arial;
-	color: #fff;
-	text-align: center;
-	line-height: 40px;
-	font-weight: 500;
-	font-size: 16px;
-	transition: all 0.6s ease;
-	opacity: 0;
-}
-
-ul li.facebook div.slider {
-	background: #3b5998;
-}
-
-ul li.twitter div.slider {
-	background: #1da1f2;
-}
-
-ul li.instagram div.slider {
-	background: #c32aa3;
-}
-
-ul li.youtube div.slider {
-	background: #ff0000;
-}
-
-ul li:hover .slider {
-	width: 100px;
-	transition: all 0.5s ease;
-}
-
-ul li:hover .slider p {
-	opacity: 1;
-	transition: all 1s 0.2s ease;
-}
-*/
 /*Add Media Query to change banner size in mobile version*/
 @media screen and (max-width: 600px) {
-/*	.wrapper {
-		display: none;
-	}
-*/
 	#banner img {
 		height: 55px;
 		width: 300px;
