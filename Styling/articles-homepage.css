@@ -1,0 +1,177 @@
+.trending-articles-container {
+	width: 75%;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	height: 600px;
+	color: #fff;
+	border: black 1px solid;
+	transition: width 0.5s ease;
+	cursor: pointer;
+}
+
+.trending-articles-container .image {
+	width: 33.33333%;
+	height: 33.33333%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+}
+
+.trending-articles-container .image .color {
+	opacity: 0.9;
+	height: 100%;
+	width: 100%;
+	transition: opacity 1s ease;
+}
+
+.trending-articles-container .image .color:hover {
+	opacity: 0;
+}
+
+.trending-articles-container .header {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-left: 10px;
+	height: 100%;
+	box-sizing: border-box;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+.trending-articles-container .header h3 {
+	font-size: 1.55em;
+	line-height: 1.65;
+	font-weight: 600;
+	box-sizing: border-box;
+	opacity: 1.0;
+	margin: 0.325em 10% 0.3em 0;
+	border-bottom: #fff 2px solid;
+	letter-spacing: 0.025em;
+	overflow: hidden;
+}
+
+.trending-articles-container .header p {
+	opacity: 1.0;
+	margin-top: 0.3em;
+	letter-spacing: 0.25em;
+	font-weight: 600;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	width: max-content;
+}
+
+#one {
+	background-image: url("../Images/1st-senate-meeting.jpg");
+}
+
+#one .color {
+	background-color: #6fc3df;
+}
+
+#two {
+	background-image: url("../Images/3rd-generation-iit-director-meet.jpg");
+}
+
+#two .color {
+	background-color: #8d82c4;
+}
+
+#three {
+	background-image: url("../Images/goa-atlantic-summit.jpg");
+}
+
+#three .color {
+	background-color: #ec8d81;
+}
+
+#four {
+	background-image: url("../Images/goa-liberation-day.jpg");
+}
+
+#four .color {
+	background-color: #e7b788;
+}
+
+#five {
+	background-image: url("../Images/goat-cooperation-meet.jpg");
+}
+
+#five .color {
+	background-color: #8ea9e8;
+}
+
+#six {
+	background-image: url("../Images/iit-goa-logo-unvieled.jpg");
+}
+
+#six .color {
+	background-color: #87c5a4;
+}
+
+#seven {
+	background-image: url("../Images/interiitsport2017.jpg");
+}
+
+#seven .color {
+	background-color: #795548;
+}
+
+#eight {
+	background-image: url("../Images/ips-meet.jpg");
+}
+
+
+#eight .color {
+	background-color: #d1d655;
+}
+
+#nine {
+	background-image: url("../Images/national-unity-day.jpg");
+}
+
+
+#nine .color {
+	background-color: #74438e;
+}
+
+@media screen and (max-width: 950px) {
+	.trending-articles-container {
+		width: 100%;
+	}
+
+	.trending-articles-container .header h3 {
+		padding: 0% 1px;
+		font-size: 1.35em;
+		line-height: 1.25;
+		letter-spacing: 0.025em;
+	}
+
+	.trending-articles-container .header p {
+		letter-spacing: 0.25em;
+		font-size: 0.7em;
+		width: max-content;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.trending-articles-container {
+		height: 400px;
+	}
+
+	.trending-articles-container .header {
+		padding: 0px 2px;
+	}
+
+	.trending-articles-container .header h3 {
+		padding: 0% 1px;
+		font-size: 1.05em;
+		line-height: 1.2;
+		letter-spacing: 0.015em;
+	}
+
+	.trending-articles-container .header p {
+		display: none;
+	}
+}
