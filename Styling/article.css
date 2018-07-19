@@ -1,0 +1,78 @@
+.leftSide {
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.6);
+	margin: 10px;
+	box-sizing: border-box;
+	padding: 25px;
+}
+
+.tag {
+	display: inline-block;
+	font-family: sans-serif;
+	letter-spacing: 3px;
+	background-color: #3d4449;
+	color: white;
+	font-size: 12px;
+	width: auto;
+	padding: 2px 5px;
+}
+
+.article-heading {
+	font-size: 36px;
+	font-family: 'Roboto Slab';
+}
+
+.article-info {
+	display: inline-block;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.author-info {
+	display: inline-flex;
+	float: left;
+}
+
+.author-image {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	background-position: center;
+	background-image: url("../Images/user2.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.author-details {
+	display: block;
+}
+
+.author-name {
+	font-size: 16px;
+	margin: 8px 10px;
+}
+
+.author-designation {
+	font-size: 12px;
+	margin: 0px 10px;
+	color: #3f3b3b;
+}
+
+.date-time {
+	color: #3f3b3b;
+	float: right;
+	margin: 8px 10px;
+	font-size: 14px;
+}
+
+@media screen and (max-width: 450px) {
+	.author-info {
+		/*display: block;*/
+		float: none;
+	}
+
+	.date-time {
+		display: block;
+		float: none;
+		margin-left: 70px;
+	}
+}
