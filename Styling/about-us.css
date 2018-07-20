@@ -1,0 +1,35 @@
+.leftSide {
+	/*border: 1px solid;*/
+	padding: 15px;
+	font-family: monospace;
+}
+
+div.leftSide header {
+	font-size: 32px;
+	color: #f27d0c;
+	margin-bottom: 6px;
+}
+
+div.leftSide p {
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+
+div.leftSide h3 {
+	margin: 4px;
+}
+
+div.leftSide a {
+	color: blue;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+	.mainBody {
+		margin: 30px 15px;
+	}
+
+	.leftSide {
+		padding: 0px;
+	}
+}

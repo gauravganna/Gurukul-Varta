@@ -66,8 +66,17 @@
 
 @media screen and (max-width: 450px) {
 	.author-info {
-		/*display: block;*/
 		float: none;
+	}
+
+	.leftSide {
+		margin: 0px;
+		padding: 10px;
+		width: 100%;
+	}
+
+	.mainBody {
+		margin: 20px;
 	}
 
 	.date-time {
