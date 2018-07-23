@@ -81,7 +81,7 @@
 	padding: 8px;
 	cursor: pointer;
 }
-
+/*
 .poll-container {
 	box-shadow: 0px 2px 5px rgba(61,68,73,0.4);
 	box-sizing: border-box;
@@ -90,10 +90,10 @@
 	max-width: 100%;
 	min-height: 300px;
 	height: auto;
-	/*border: 1px solid;*/
-}
+}*/
 
-.sister-media-body-container {
+.sister-media-body-container,
+.most-popular-container {
 	box-shadow: 0px 2px 5px rgba(61,68,73,0.4);
 	box-sizing: border-box;
 	margin: 10px;
@@ -102,27 +102,41 @@
 	height: auto;
 }
 
-.sister-media-body-container li {
-	list-style: none;
-	padding: 2.5px;
-	font-size: 14px;
+.most-popular-container ol {
+	padding-left: 20px;
 }
 
-.sister-media-body-container a {
+.sister-media-body-container li,
+.most-popular-container li {
+	/*list-style: none;*/
+	padding: 2.5px;
+	line-height: 20px;
+	font-size: 15px;
+}
+
+.sister-media-body-container li {
+	list-style: none;
+}
+
+.sister-media-body-container a,
+.most-popular a {
 	text-decoration: none;
 	color: rgb(61,68,73);
 }
 
-.sister-media-body-container a:hover {
+.sister-media-body-container a:hover,
+.most-popular a:hover {
 	color: #f27d0c;
 }
 
-.sister-media-body-container a:visited {
+.sister-media-body-container a:visited,
+.most-popular-container a:visited {
 	color: blue;
 }
 
-.anything-else-container {
-	min-height: 200px;
+.anything-else-container,
+.social-plugin-container {
+	min-height: 300px;
 	box-sizing: border-box;
 	padding: 10px;
 	margin: 10px;
@@ -149,9 +163,11 @@
 
 	.latest-edition,
 	.email-subscription,
-	.poll,
+	/*.poll,*/
+	.most-popular,
 	.sister-media-bodies,
-	.anything-else {
+	.anything-else,
+	.social-plugin {
 		width: 40%;
 		margin: 5%;
 	}
@@ -164,9 +180,11 @@
 @media screen and (max-width: 600px) {
 	.latest-edition,
 	.email-subscription,
-	.poll,
+	/*.poll,*/
+	.most-popular,
 	.sister-media-bodies,
-	.anything-else {
+	.anything-else,
+	.social-plugin {
 		width: 100%;
 		margin: 0%;
 	}
@@ -174,18 +192,28 @@
 
 .latest-edition,
 .email-subscription,
-.poll,
+/*.poll,*/
 .sister-media-bodies,
-.anything-else {
+.anything-else,
+.social-plugin {
 	margin-bottom: 25px;
 }
 
 .latest-edition:hover > .header,
 .email-subscription:hover > .header,
-.poll:hover > .header,
+/*.poll:hover > .header,*/
 .sister-media-bodies:hover > .header,
-.anything-else:hover > .header {
+.anything-else:hover > .header,
+.most-popular:hover > .header,
+.social-plugin:hover > .header {
 	color: white;
 	background-color: #f27d0c;
 }
 
+.fb_iframe_widget span{        
+    overflow: initial !important;
+}
+.fb_iframe_widget iframe{        
+    width: auto !important;
+    height: 280px !important;    
+}

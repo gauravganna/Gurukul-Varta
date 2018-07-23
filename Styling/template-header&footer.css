@@ -13,41 +13,67 @@
 	line-height: 36px;
 	color: white;
 	font-size: 14px; 
-	padding-left: 40px;
-}
-
-#aboveBanner input[type=text] {
-
-  padding: 6px;
-  margin: 2.5px 0px;
-  font-size: 14px;
-  border: none;
-  border-radius: 1px;
-}
-
-#aboveBanner .search-container button {
-  float: right;
-  padding: 5px 10px;
-  margin: 2.5px 0px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-#aboveBanner .search-container button:hover {
-  background: #ccc;
+	padding:0px 40px;
 }
 
 #date {
 	float: left;
 	transition: display 1.2s ease-out;
+	width: auto;
+}
+
+#rightAboveBanner {
+	float: right;
+	width: auto;
+	height: 100%;
+	box-sizing: border-box;
+	margin-right: 10px;
 }
 
 .search-container {
-	transition: all 1.2s ease-out;
-	float: right;
+	float: left;
+	display: inline-block;
+	width: auto;
+	height: 100%;
+	margin-right: 10px;
+}
+
+.search-container input[type=text] {
+	border: none;
+	padding: 6px;
+	border-radius: 0px;
+	margin: 0px;
+}
+
+.search-container button {
+	border: none;
+	padding: 6px;
+	margin: 0px;
+	border-radius: 2px;
+}
+
+.login {
+	box-sizing: border-box;
+	display: inline-block;
+	background-image: url("../Images/login_register.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 28px;
+	margin: 4px 5px;
+	width: 28px;
+}
+
+.socialTop {
+	box-sizing: border-box;
+	display: inline-block;
+	background-image: url("../Images/facebook_top.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 28px;
+	margin: 4px 0px;
+	width: 28px;
 }
 
 #banner {
@@ -106,7 +132,7 @@ nav.desktop li {
 	font-size: 16px;
 	padding: 0px 5px;
 	border-style: solid;
-	border-width: 0px 0px 3px 0px;
+	border-width: 0px 0px 0px 0px;
 	border-color: #060605;
 }
 
@@ -229,11 +255,11 @@ section.mainBody.active {
 }
 
 #about {
+	margin-top: 20px;
 	font-size: 16px;
 	font-weight: 100;
 	box-sizing: border-box;
 	padding: 0px 30px;
-	margin-top: 10px;
 	font-family: sans-serif;
 	line-height: 1.3;
 	color: white;
@@ -264,6 +290,7 @@ section.mainBody.active {
 #social {
 	margin-left: 30px;
 	margin-top: 20px;
+	display: inline-block;
 }
 
 #social a {
@@ -271,8 +298,8 @@ section.mainBody.active {
 }
 
 #social img {
-	height: 48px;
-	width: 48px;
+	height: 40px;
+	width: 40px;
 }
 
 .copyright {
@@ -284,8 +311,8 @@ section.mainBody.active {
 	line-height: 24.4px;
 }
 
-#break,
-#socialBreak {
+#break
+/*#socialBreak*/ {
 	display: none;
 	transition: display 0.4s ease-out; 
 }
@@ -295,6 +322,16 @@ section.mainBody.active {
 		width: 100%;
 		height: auto;
 
+	}
+
+	.popular-tags p{
+		margin-bottom: 15px;
+	}
+}
+
+@media screen and (max-width: 800px) and (min-width: 480px) {
+	.footer {
+		height: 300px;
 	}
 }
 
@@ -319,23 +356,48 @@ section.mainBody.active {
 		display: none;
 	}
 
-	.search-container {
-		float: none;
-		text-align: center;
-		display: inline;
+	#aboveBanner {
+		padding: 0px 10px;
 	}
 
-	#aboveBanner .search-container button,
-	#aboveBanner .search-container input[type=text]{
-		margin: auto 0px;
+	#rightAboveBanner {
 		float: none;
+		width: auto;
+		margin: auto;
+		text-align: center;
+	}
+
+	.search-container input[type=text] {
+		width: 180px;
 	}
 }
 
-@media screen and (max-width: 725px) and (min-width: 480px) {
+.popular-tags {
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 30px;
+	color: #fff;
+}
+
+.popular-tags p {
+	word-spacing: 15px;
+	line-height: 30px;
+}
+
+.popular-tags a {
+	text-decoration: none;
+	padding: 0px;
+	font-size: 18px;
+}
+
+.popular-tags a:hover {
+	font-size: 20px;
+}
+
+/*@media screen and (max-width: 725px) and (min-width: 480px) {
 	#socialBreak {
 		display: block;
 	}
 
-}
+}*/
 /*Social Media*/

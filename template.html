@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<!-- Meta Information -->
+	<meta charset="utf-8">
+	<!-- This is to warn browser to scale content based on the size of the screen-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale="1">
+
+	<title>Template</title>
+
+	<link rel="stylesheet" type="text/css" href="Styling/template-header&footer.css">
+	<link rel="stylesheet" type="text/css" href="Styling/template-aside.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+	<!-- Include JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script >
+		
+		$(document).ready(function(){
+			/* The following function switches bar and cross and displays unordered list when bar is clicked*/
+			$(".hamburger-btn .fa-window-close-o").hide();
+
+			$(".hamburger-btn .fa-bars").click(function(){
+				$(this).hide();
+				$(".hamburger-btn .fa-window-close-o").show();
+				$("section.mainBody").addClass("active");
+				$("nav.mobile ul").addClass("active");
+			});
+
+			$(".hamburger-btn .fa-window-close-o").click(function(){
+				$(this).hide();
+				$(".hamburger-btn .fa-bars").show();
+				$("section.mainBody").removeClass("active");
+				$("nav.mobile ul").removeClass("active");
+			});
+
+			/*The following part retrieves Date and Time*/
+			const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+			const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+			var n = new Date();
+			year = n.getFullYear();
+			month = monthNames[n.getMonth()];
+			date = n.getDate();
+			day = weekday[n.getDay()];
+			document.getElementById("date").innerHTML = day + "   " + month + " " + date + ", " + year;
+
+		});
+
+	</script>
+
+	<!-- The follwing lines are used to config favicon for different browsers and screen settings. -->
+	<link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+	<link rel="manifest" href="Favicon/site.webmanifest">
+	<link rel="mask-icon" href="Favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="Favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="Favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<!-- It ends here.-->
+
+</head>
+
+<body>
+<!-- The following code is for Social Media Plug In -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+<!--It Ends Here -->
+
+	<header id="aboveBanner">		
+		<div id="date">
+		</div>
+
+  		<div id="rightAboveBanner">
+  			<div class="search-container">
+  				<form action="/action_page.php">
+      				<input type="text" placeholder="Search.." name="search"/><button type="submit"><i class="fa fa-search"></i></button>
+    			</form>
+  			</div>
+  			<a href="#" title="Sign In"><div class="login"></div></a>
+	  		<a href="#" title="Visit our Fb Page"><div class="socialTop"></div></a>
+  		</div>
+	</header>
+
+	<header id="banner">	
+		<a href="index.html"><img src="Images/banner.jpeg" alt="Gurukul Varta">
+			<div class="lineBelowBanner"></div> 
+			<div class="heading">
+				<p>The IIT Goa Campus Newsletter</p>
+			</div>	
+		</a>
+	</header>
+	<!-- Navigation Buttons -->
+	<!-- Desktop Version -->
+	<nav class="desktop">
+		<ul>
+			<li><a href="insti-news.html" >Insti News</a></li>
+			<li><a href="academics.html" >Academics</a></li>
+			<li><a href="upcoming-events.html" >Upcoming Events</a></li>
+			<li><a href="extra-curriculars.html" >Extra Curriculars</a></li>
+			<li><a href="op-eds.html" >Op Eds</a></li>
+			<li><a href="career.html" >Career</a></li>
+			<li><a href="other-stuffs.html" >Other Stuff</a></li>
+			<li><a href="about-us.html" >About Us</a></li>
+			<li><a href="print-edition.html" >Print Edition</a></li>
+		</ul>
+	</nav>
+	<!-- Mobile Version -->
+	<nav class="mobile">
+		<div class="hamburger-btn">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+			<i class="fa fa-window-close-o" aria-hidden="true"></i>
+		</div>
+		<ul>
+			<li><a href="insti-news.html" >Insti News</a></li>
+			<li><a href="academics.html" >Academics</a></li>
+			<li><a href="upcoming-events.html" >Upcoming Events</a></li>
+			<li><a href="extra-curriculars.html" >Extra Curriculars</a></li>
+			<li><a href="op-eds.html" >Op Eds</a></li>
+			<li><a href="career.html" >Career</a></li>
+			<li><a href="other-stuffs.html" >Other Stuff</a></li>
+			<li><a href="about-us.html" >About Us</a></li>
+			<li><a href="print-edition.html" >Print Edition</a></li>
+		</ul>
+	</nav>
+	
+	<section class="mainBody">
+		<div id="lineBelowArticle"></div>
+
+		<div class="belowMainArticle">
+			<div class="leftSide">
+				
+			</div>
+
+
+			<aside class="rightSide">			
+				<div class="latest-edition">
+					<div class="header">
+						Latest Edition
+					</div>
+					<a href="http://www.iitgoa.ac.in/pdf/newsletter/April_2018_english.pdf" target="_blank"><img class="latest-version-image" src="Images/vol2-issue1.png"/></a>
+				</div>
+
+				<div class="email-subscription">
+					<div class="header">
+						Email Subscription
+					</div>
+					<div class="email-subscription-container">
+						<form action="/action_page.php">
+							<p>Email : </p>
+							<input type="text" name="Email" placeholder="abc@xyz.com">
+							<input type="submit" value="Submit">
+						</form>
+					</div>
+				</div>
+
+				<!-- <div class="poll">
+					<div class="header">
+						Poll of the Week
+					</div>
+					<div class="poll-container">
+						
+					</div>
+				</div> -->
+
+				<div class="social-plugin">
+					<div class="header">
+						Social Plugin
+					</div>
+					<div class="social-plugin-container">
+						<div class="fb-page" data-href="https://www.facebook.com/GurukulVarta" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/GurukulVarta" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/GurukulVarta">Gurukul Varta - The IIT Goa Campus Newsletter</a></blockquote></div>
+					</div>
+				</div>
+
+				<div class="most-popular">
+						<div class="header">
+							Most Popular
+						</div>
+						<div class="most-popular-container">
+						<ol>
+							<li><a href="#" target="_blank">Article 1</a></li>
+							<li><a href="#" target="_blank">Article 2</a></li>
+							<li><a href="" target="_blank">Article 3</a></li>
+							<li><a href="#" target="_blank">Article 4</a></li>
+							<li><a href="#" target="_blank">Article 5</a></li>
+							<li><a href="#" target="_blank">Article 6</a></li>
+						</ol>	
+						</div>
+				</div>
+
+				<div class="sister-media-bodies">
+					<div class="header">
+						Sister Media Bodies
+					</div>
+					<div class="sister-media-body-container">
+						<ul>
+							<li><a href="http://www.insightiitb.org" target="_blank">Insights, IIT Bombay</a></li>
+							<li><a href="http://www.t5eiitm.org/" target="_blank">The Fifth Estate, IIT Madras</a></li>
+							<li><a href="http://www.voxiitk.com" target="_blank">Vox Populi, IIT Kanpur</a></li>
+							<li><a href="http://www.wona.co.in/" target="_blank">Watch Out, IIT Roorkee</a></li>
+							<li><a href="http://bsp.iitd.ac.in" target="_blank">BSP, IIT Delhi</a></li>
+							<li><a href="http://www.scholarsavenue.org/" target="_blank">Scholars Avenue, IIT Kharagpur</a></li>
+						</ul>
+					</div>
+				</div>
+
+					<!--Replace Anything Else With the Name of the Section and change accordingly in css file-->
+				<div class="anything-else">
+					<div class="header">
+						Anything Else
+					</div>
+					<div class="anything-else-container">
+						
+					</div>
+				</div>
+
+			</aside>
+		</div>
+
+
+	</section>
+
+	<footer>
+		<div class="footer">
+			<p class="footerHeader">About Gurukul Varta</p> 
+			<div class="underline"></div>
+			<div id="about">Gurukul Varta is the monthly newsletter issued by IIT Goa.</div>
+			<div id="social">
+				<a href="#"><img src="Images/facebook.png" alt="Facebook" /></a>
+				<!-- <a href="#"><img src="Images/twitter.png" alt="Twitter" /></a> -->
+				<!-- <br id="socialBreak"/> -->
+				<a href="#"><img src="Images/youtube.png" alt="YouTube" /></a>
+<!-- 				<a href="#"><img src="Images/instagram.png" alt="Instagram" /></a> -->
+			</div>
+		</div>
+		<div class="footer">
+			<p class="footerHeader">Contact Us</p>
+			<div class="underline"></div>
+			<p id="mail">Email:</p>
+			<a> gv@iitgoa.ac.in </a>
+			<p id="editor">Chief Editor</p>
+			<p id="editorInfo">Neha Shah +91987654321</p>
+		</div>
+		<div class="footer">
+			<p class="footerHeader">Popular Tags</p>
+			<div class="underline"></div>
+			<div class="popular-tags">
+				<p><a href="#">Career</a>
+				<a href="#">Internship</a>
+				<a href="#">Academics</a>
+				<a href="#">Sports</a>
+				<a href="#">ExtraCurriculam</a>
+				<a href="#">JayMataDi</a>
+
+				</p>
+			</div>
+		</div>	
+		<div class="copyright">
+			<p> Copyright © 2018. All Rights Reserved | <br id="break"/> Website Designed by Gaurav Ganna</p>
+		</div>
+	</footer>
+</body>
+
+</html>

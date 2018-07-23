@@ -112,15 +112,16 @@
 	.left,
 	.right {
 		width: 100%;
-		float: none;
-		height: auto; 
+		float: none; 
 	}
 
 	.left {
+		height: 450px;
 		padding: 40px; 
 	}
 
 	.right {
+		height: 450px;
 		padding: 30px;
 	}
 
@@ -144,12 +145,16 @@
 	.right {
 		width: 100%;
 		float: none;
-		height: auto;
 		padding: 5px; 
 	}
 
 	.left {
+		height: auto;
 		padding: 15px;
+	}
+
+	.right {
+		height: 280px;
 	}
 
 	#heading {
@@ -426,7 +431,7 @@
 	font-family: 'Roboto Slab';
 }
 
-.tag {
+.category {
 	display: inline;
 	font-family: sans-serif;
 	background-color: #3d4449;
