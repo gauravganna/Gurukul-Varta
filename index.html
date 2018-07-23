@@ -6,13 +6,12 @@
 	<!-- This is to warn browser to scale content based on the size of the screen-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale="1">
 
-	<title>Gurukul Varta</title>
+	<title>Template</title>
 
 	<link rel="stylesheet" type="text/css" href="Styling/template-header&footer.css">
 	<link rel="stylesheet" type="text/css" href="Styling/template-aside.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
-	<link rel="stylesheet" type="text/css" href="Styling/homepage.css">
 	<!-- Include JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script >
@@ -45,25 +44,6 @@
 			day = weekday[n.getDay()];
 			document.getElementById("date").innerHTML = day + "   " + month + " " + date + ", " + year;
 
-			/*The following part gives the sliding effect*/
-			var slideIndex = 0;
-			carousel();
-
-			function carousel(){
-				var x = document.getElementsByClassName("mainArticle");
-				var y = document.getElementsByClassName("dot");
-				for(var i=0;i<x.length;i++){
-					x[i].style.display = "none";
-					y[i].style.backgroundColor = "#ff9f80";
-				}
-				slideIndex++;
-				if( slideIndex > x.length ){ 
-					slideIndex = 1;
-				}
-				x[slideIndex-1].style.display = "flex";
-				y[slideIndex-1].style.backgroundColor = "#f27d0c";
-				setTimeout(carousel,2500);
-			}
 		});
 
 	</script>
@@ -83,6 +63,15 @@
 </head>
 
 <body>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 	<header id="aboveBanner">
 		<div id="date">
 		</div>
@@ -136,319 +125,70 @@
 	</nav>
 	
 	<section class="mainBody">
-		<div class="mainArticle" id="article1">
-			<div class="left">
-				<h1 id="heading">From The Desk of Director</h1>
-				<h5 id="subHeading">Excerpt from an interview with Dr. b. k. mishra, director, iit goa</h5>
-				<p id="detail">Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-				<a id="readMore" href="#">Read More ..   </a>
-			</div>
-			<div class="right">
-				<img src="Images/article_1.png" alt=" ">
-			</div>
-		</div>
-
-		<div class="mainArticle" id="article2">
-			<div class="left">
-				<h1 id="heading">National Unity Day</h1>
-				<h5 id="subHeading">31st October, 2017</h5>
-				<p id="detail">This day marked the birth anniversary of Sardar Vallabhbhai Patel,the Ironman of India. We paid homage to this great man who is responsible for stringing together the India we know today. Had it not been for the determination and strong resolve to unite the nation, India would have been split into numerous princely states. </p>
-				<a id="readMore" href="#">Read More ..   </a>
-			</div>
-			<div class="right">
-				<img src="Images/article_2.png" alt=" ">
-			</div>
-		</div>
-
-		<div class="mainArticle" id="article3">
-			<div class="left">
-				<h1 id="heading">4th International Yoga Day</h1>
-				<h5 id="subHeading">21st June,2018</h5>
-				<p id="detail">4th International Day of Yoga was celebrated with great enthusiasm by the students, staffs and faculties of IIT Goa on 21 st June 2018. The event started with welcome speech by Dr. Sachin Kore, Dean (Student Affairs), followed by Director's address to the participants. Yoga Instructor Mr. Manmohan Sewda, Jr. Assistant, IIT Goa, demonstrated 19 different yoga asanas.</p>
-				<a id="readMore" href="#">Read More ..   </a>
-			</div>
-			<div class="right">
-				<img src="Images/article_3.png" alt=" ">
-			</div>
-		</div>
-
-		<div class="dot-container">
-			<div id="dot1" class="dot"></div>
-			<div id="dot2" class="dot"></div>
-			<div id="dot3" class="dot"></div>
-		</div>
 		<div id="lineBelowArticle"></div>
 
-	<div class="belowMainArticle">
-		<div class="leftSide">
-			<div class="trending-article-header">
-				Trending Article
-			</div>
-			<div class="trending-articles-container">
-				<div class="image" id="one">
-					<div class="color">
-						<div class="header">
-							<h3>1st Senate Meeting</h3>
-							<p>Know More </p>
-						</div>
-					</div>
-				</div>
-
-				<div class="image" id="two">
-					<div class="color">
-						<div class="header">
-							<h3>3rd Generation IIT Director Meet</h3>
-							<p>Know More </p>
-						</div>
-					</div>
-				</div>
-
-				<div class="image" id="three">
-					<div class="color">
-						<div class="header">
-							<h3>Goa Atlantic Summit</h3>
-							<p>Know More </p>
-						</div>
-					</div>
-				</div>
-
-				<div class="image" id="four">
-					<div class="color">
-						<div class="header">
-							<h3>Goa Liberation Day</h3>
-							<p>Know More </p>
-						</div>
-					</div>
-				</div>
-
-				<div class="image" id="five">
-					<div class="color">
-						<div class="header">
-							<h3>GOAT Cooperation Meet</h3>
-							<p>Know More </p>
-						</div>
-					</div>
-				</div>
-
-				<div class="image" id="six">
-					<div class="color">
-						<div class="header">
-							<h3>IIT Goa Logo Unvieled</h3>
-							<p>Know More</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="image" id="seven">
-					<div class="color">
-						<div class="header">
-							<h3>Inter IIT Sports Meet 2k17</h3>
-							<p>Know More </p>
-						</div>
-					</div>
-				</div>
-
-				<div class="image" id="eight">
-					<div class="color">
-						<div class="header">
-							<h3>IPS Summit</h3>
-							<p>Know More </p>
-						</div>
-					</div>
-				</div>
-
-				<div class="image" id="nine">
-					<div class="color">
-						<div class="header">
-							<h3>National Unity Day</h3>
-							<p>Know More </p>
-						</div>
-					</div>
-				</div>
+		<div class="belowMainArticle">
+			<div class="leftSide">
+				
 			</div>
 
-			<div class="recent-article-header">
-				Recent
-			</div>
 
-			<div class="recent-article-container">
-				<div id="container-left">
-					<div id="recent-one">
-						<div class="recent-image">
-							
-						</div>
-						<div class="recent-brief">
-							<div class="recent-title">
-								Trial Version
-							</div>
-							<div class="tag">
-								Trial
-							</div>	
-						</div>
+			<aside class="rightSide">			
+				<div class="latest-edition">
+					<div class="header">
+						Latest Edition
 					</div>
-					
-					<div id="recent-two">
-						<div class="recent-image">
-							
-						</div>
-						<div class="recent-brief">
-							<div class="recent-title">
-								Trial Version
-							</div>
-							<div class="tag">
-								Trial
-							</div>	
-						</div>
-					</div>
+					<a href="http://www.iitgoa.ac.in/pdf/newsletter/April_2018_english.pdf" target="_blank"><img class="latest-version-image" src="Images/vol2-issue1.png"/></a>
+				</div>
 
-					<div id="recent-three">
-						<div class="recent-image">
-							
-						</div>
-						<div class="recent-brief">
-							<div class="recent-title">
-								Trial Version
-							</div>
-							<div class="tag">
-								Trial
-							</div>	
-						</div>
+				<div class="email-subscription">
+					<div class="header">
+						Email Subscription
 					</div>
-
-					<div id="recent-four">
-						<div class="recent-image">
-							
-						</div>
-						<div class="recent-brief">
-							<div class="recent-title">
-								Trial Version
-							</div>
-							<div class="tag">
-								Trial
-							</div>	
-						</div>
+					<div class="email-subscription-container">
+						<form action="/action_page.php">
+							<p>Email : </p>
+							<input type="text" name="Email" placeholder="abc@xyz.com">
+							<input type="submit" value="Submit">
+						</form>
 					</div>
 				</div>
 
-				<div id="container-right">
-
-					<div id="recent-five">
-						<div class="recent-image">
-							
-						</div>
-						<div class="recent-brief">
-							<div class="recent-title">
-								Trial Version
-							</div>
-							<div class="tag">
-								Trial
-							</div>	
-						</div>
+				<!-- <div class="poll">
+					<div class="header">
+						Poll of the Week
 					</div>
-
-					<div id="recent-six">
-						<div class="recent-image">
-							
-						</div>
-						<div class="recent-brief">
-							<div class="recent-title">
-								Trial Version
-							</div>
-							<div class="tag">
-								Trial
-							</div>	
-						</div>
+					<div class="poll-container">
+						
 					</div>
+				</div> -->
 
-					<div id="recent-seven">
-						<div class="recent-image">
-							
-						</div>
-						<div class="recent-brief">
-							<div class="recent-title">
-								Trial Version
-							</div>
-							<div class="tag">
-								Trial
-							</div>	
-						</div>
+				<div class="sister-media-bodies">
+					<div class="header">
+						Sister Media Bodies
 					</div>
-
-					<div id="recent-eight">
-						<div class="recent-image">
-							
-						</div>
-						<div class="recent-brief">
-							<div class="recent-title">
-								Trial Version
-							</div>
-							<div class="tag">
-								Trial
-							</div>	
-						</div>
+					<div class="sister-media-body-container">
+						<ul>
+							<li><a href="http://www.insightiitb.org" target="_blank">Insights, IIT Bombay</a></li>
+							<li><a href="http://www.t5eiitm.org/" target="_blank">The Fifth Estate, IIT Madras</a></li>
+							<li><a href="http://www.voxiitk.com" target="_blank">Vox Populi, IIT Kanpur</a></li>
+							<li><a href="http://www.wona.co.in/" target="_blank">Watch Out, IIT Roorkee</a></li>
+							<li><a href="http://bsp.iitd.ac.in" target="_blank">BSP, IIT Delhi</a></li>
+							<li><a href="http://www.scholarsavenue.org/" target="_blank">Scholars Avenue, IIT Kharagpur</a></li>
+						</ul>
 					</div>
 				</div>
-			</div>
+
+					<!--Replace Anything Else With the Name of the Section and change accordingly in css file-->
+				<div class="anything-else">
+					<div class="header">
+						Anything Else
+					</div>
+					<div class="fb-page" data-href="https://www.facebook.com/ImAliaaBhatt/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ImAliaaBhatt/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ImAliaaBhatt/">Alia Bhatt</a></blockquote></div>
+				</div>
+
+			</aside>
 		</div>
-
-		<aside class="rightSide">			
-			<div class="latest-edition">
-				<div class="header">
-					Latest Edition
-				</div>
-				<a href="http://www.iitgoa.ac.in/pdf/newsletter/April_2018_english.pdf" target="_blank"><img class="latest-version-image" src="Images/vol2-issue1.png"/></a>
-			</div>
-
-			<div class="email-subscription">
-				<div class="header">
-					Email Subscription
-				</div>
-				<div class="email-subscription-container">
-					<form action="/action_page.php">
-						<p>Email : </p>
-						<input type="text" name="Email" placeholder="abc@xyz.com">
-						<input type="submit" value="Submit">
-					</form>
-				</div>
-			</div>
-
-			<div class="poll">
-				<div class="header">
-					Poll of the Week
-				</div>
-				<div class="poll-container">
-					
-				</div>
-			</div>
-
-			<div class="sister-media-bodies">
-				<div class="header">
-					Sister Media Bodies
-				</div>
-				<div class="sister-media-body-container">
-					<ul>
-						<li><a href="http://www.insightiitb.org" target="_blank">Insights, IIT Bombay</a></li>
-						<li><a href="http://www.t5eiitm.org/" target="_blank">The Fifth Estate, IIT Madras</a></li>
-						<li><a href="http://www.voxiitk.com" target="_blank">Vox Populi, IIT Kanpur</a></li>
-						<li><a href="http://www.wona.co.in/" target="_blank">Watch Out, IIT Roorkee</a></li>
-						<li><a href="http://bsp.iitd.ac.in" target="_blank">BSP, IIT Delhi</a></li>
-						<li><a href="http://www.scholarsavenue.org/" target="_blank">Scholars Avenue, IIT Kharagpur</a></li>
-					</ul>
-				</div>
-			</div>
-
-				<!--Replace Anything Else With the Name of the Section and change accordingly in css file-->
-			<div class="anything-else">
-				<div class="header">
-					Anything Else
-				</div>
-				<div class="anything-else-container">
-					
-				</div>
-			</div>
-
-		</aside>
-	</div>
 
 
 	</section>
