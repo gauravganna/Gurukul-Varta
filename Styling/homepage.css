@@ -453,3 +453,17 @@
 		padding: 5px;
 	}
 }
+
+.recent-article-container a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.recent-title:hover {
+	opacity: 0.8;
+}
+
+#recent-one .recent-image {
+	background-image: url("../Images/2nd-senate-meeting.jpg");
+	border: none;
+}

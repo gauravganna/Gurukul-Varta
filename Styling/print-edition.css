@@ -64,6 +64,10 @@
 }
 
 @media screen and (max-width: 450px) {
+	.mainBody {
+		margin: 10px;
+	}
+
 	.leftSide {
 		display: block;
 	}
@@ -75,6 +79,7 @@
 	}
 
 	.print-edition-image {
-		height: 300px;
+		height: 330px;
+		width: auto;
 	}
 }

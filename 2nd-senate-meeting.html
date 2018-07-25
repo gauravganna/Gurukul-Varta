@@ -6,12 +6,13 @@
 	<!-- This is to warn browser to scale content based on the size of the screen-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale="1">
 
-	<title>Template</title>
+	<title>Article Page</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="Styling/template-header&footer.css">
 	<link rel="stylesheet" type="text/css" href="Styling/template-aside.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="Styling/article.css">
 	<!-- Include JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script >
@@ -63,17 +64,6 @@
 </head>
 
 <body>
-<!-- The following code is for Social Media Plug In -->
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0';
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-<!--It Ends Here -->
-
 	<header id="aboveBanner">		
 		<div id="date">
 		</div>
@@ -85,10 +75,9 @@
     			</form>
   			</div>
   			<a href="#" title="Sign In"><div class="login"></div></a>
-	  		<a href="https://www.facebook.com/GurukulVarta" title="Visit our Fb Page" target="_blank"><div class="socialTop"></div></a>
+	  		<a href="https://www.facebook.com/GurukulVarta" target="_blank" title="Visit our Fb Page"><div class="socialTop"></div></a>
   		</div>
 	</header>
-
 	<header id="banner">	
 		<a href="index.html"><img src="Images/banner.png" alt="Gurukul Varta">
 			<div class="lineBelowBanner"></div> 
@@ -136,7 +125,40 @@
 
 		<div class="belowMainArticle">
 			<div class="leftSide">
-				
+				<div class="category">
+					Insti News
+				</div>
+				<div class="article-heading">
+					2nd Senate Meeting
+				</div>
+
+				<div class="article-info">
+					<div class="author-info">
+						<div class="author-image">
+							
+						</div>
+						<div class="author-details">
+							<div class="author-name">
+								Gaurav Ganna
+							</div>
+							<div class="author-designation">
+								Contributor	
+							</div>
+						</div>
+					</div>
+
+					<div class="date-time">
+						28 June,2018
+					</div>
+				</div>
+
+				<div class="article">
+					<img src="Images/2nd-senate-meeting.jpg" style="width: 100%; height: auto;">
+					<br/><br/>
+					<p style="padding: 10px; word-spacing: 4px; line-height: 22px;">The 2nd Senate meeting of IIT Goa was convened on 28th June, 2018 in its temporary Campus in GEC Farmagudi. The meeting was conducted under the chairmanship of Prof. B. K. Mishra, Director, IIT Goa and was attended by the nominated members of Senate as well as heads of the concerned departments from IIT Bombay. 31 members, special invitees, and invitees including student’s representative participated in the meeting in person and 5 members participated through video conferencing.
+					<br/><br/>
+					Members of the Senate discussed various agenda items related to Academic function of the Institute. To begin with, Registrar-in-charge presented the action taken report based on the minutes on the 1st senate meeting. Following that the Senate discussed and gave its approval to some important agenda items such as introduction of M. Tech Programs, establishing IIT Goa Centre of Excellence on ‘Particles, Colloids & Interfaces’ and Centre for Rural Development and Technology. The Academic performance of the students in the past semesters and PhD admission report were also presented and discussed in the meeting. The meeting concluded with some valuable suggestions from various attendees. </p>
+				</div>
 			</div>
 
 
@@ -168,9 +190,10 @@
 					<div class="poll-container">
 						
 					</div>
-				</div> -->
+				</div>
+	 -->
 
-				<div class="social-plugin">
+	 			<div class="social-plugin">
 					<div class="header">
 						Social Plugin
 					</div>
@@ -188,32 +211,6 @@
 						<div class="most-popular-container">Article 3</div>
 						<div class="most-popular-container">Article 4</div>
 						<div class="most-popular-container">Article 5</div>
-				</div>
-
-				<div class="sister-media-bodies">
-					<div class="header">
-						Sister Media Bodies
-					</div>
-					<div class="sister-media-body-container">
-						<ul>
-							<li><a href="http://www.insightiitb.org" target="_blank">Insights, IIT Bombay</a></li>
-							<li><a href="http://www.t5eiitm.org/" target="_blank">The Fifth Estate, IIT Madras</a></li>
-							<li><a href="http://www.voxiitk.com" target="_blank">Vox Populi, IIT Kanpur</a></li>
-							<li><a href="http://www.wona.co.in/" target="_blank">Watch Out, IIT Roorkee</a></li>
-							<li><a href="http://bsp.iitd.ac.in" target="_blank">BSP, IIT Delhi</a></li>
-							<li><a href="http://www.scholarsavenue.org/" target="_blank">Scholars Avenue, IIT Kharagpur</a></li>
-						</ul>
-					</div>
-				</div>
-
-					<!--Replace Anything Else With the Name of the Section and change accordingly in css file-->
-				<div class="anything-else">
-					<div class="header">
-						Anything Else
-					</div>
-					<div class="anything-else-container">
-						
-					</div>
 				</div>
 
 			</aside>
