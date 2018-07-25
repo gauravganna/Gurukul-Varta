@@ -30,7 +30,7 @@
 
 .right img {
 	box-sizing: border-box;
-	box-shadow: 5px 5px 6px rgba(242,125,12,0.8);
+	box-shadow: 5px 5px 6px rgba(93,104,111,0.8);
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
@@ -362,7 +362,7 @@
 
 .trending-article-header,
 .recent-article-header {
-	border-left: red 7.5px solid;
+	border-left: #3d4449 7.5px solid;
 	border-radius: 4px 0px 0px 0px;
 	height: 40px;
 	line-height: 40px;
@@ -370,11 +370,12 @@
 	color: #f27d0c;
 	box-shadow: 0px 5px 4px rgba(0,0,0,0.2);
 	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 20px;
 	box-sizing: border-box;
 	padding: 0px 30px;
 	margin-bottom: 10px;
 	width: auto;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .recent-article-container {
@@ -422,7 +423,7 @@
 	width: 70%;
 	height: 100%;
 	box-sizing: border-box;
-	border: red 1px solid;
+	/*border: red 1px solid;*/
 	display: block;
 }
 
