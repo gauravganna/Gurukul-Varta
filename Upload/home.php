@@ -28,12 +28,12 @@ $_SESSION["edit_upload"]="";
 		
 	</form>
 
-	<br>
+	<!-- <br>
 
 	<form action="logs.php" method="post" enctype="multipart/form-data">
 		<input type="Submit" name="submit" value="Articles Uploaded Logs">
 		
-	</form>	
+	</form>	 -->
 	<br>
 	<br>
 	<form action="upload_form.php" method="post" enctype="multipart/form-data">
