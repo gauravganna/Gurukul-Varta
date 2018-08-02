@@ -1,3 +1,16 @@
+<?php
+$servername = "localhost";
+$username = "gv";
+$password = "Iitgoa$$$777";
+$dbname = "gurukulVarta";
+
+// Create connection
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+
+$query = "SELECT * FROM articles WHERE category='Extra Curriculars' ORDER BY id DESC";
+$result = mysqli_query($conn,$query);
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -28,31 +41,26 @@
 				</div></a>
 
 				<div class="other-articles-container">
-					<div id="other-one">
-						<a href="#"><div class="other-image"></div></a>
-						<div class="other-description">
-							<a href="#"><div class="other-title">
-								Inter IIT Sports Event was organised in IIT Madras where our Team Participated
-							</div></a>
-							<div class="other-author">
-								Gaurav Ganna
-							</div>
-							<div class="other-date">
-								July 25.2018,16:50 pm
-							</div>
-						</div>
-					</div>
+					
+				<?php 
+					while($row = mysqli_fetch_assoc($result)) {
+						echo '<div>';
+							echo '<a href="article.php?type=extra-curriculars&id=' . $row['id'] . '"><div class="other-image" style="background-image: url(Images/' . $row['article_image'] . ');"></div></a>';
+							echo '<div class="other-description">';
+								echo '<a href="article.php?type=extra-curriculars&id=' . $row['id'] . '"><div class="other-title">';
+									echo $row['title'];
+								echo '</div></a>';
+								echo '<div class="other-author">';
+									echo $row['author'];
+								echo '</div>';
+								echo '<div class="other-date">';
+									echo date('d F,Y',strtotime($row['date']));
+								echo '</div>';
+							echo '</div>';
+						echo '</div>';
+					} 
+				?>
 
-					<div id="other-two">
-						<a href=""><div class="other-image"></div></a>
-						<div class="other-description">
-							<a href=""><div class="other-title">
-								1st Senate Meeting was organised at IIT Goa.
-							</div></a>
-							<div class="other-author">Sahaj Jain</div>
-							<div class="other-date">July 25.2018,17:42 pm</div>
-						</div>
-					</div>
 				</div>		
 			</div>
 			

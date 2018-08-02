@@ -108,11 +108,6 @@
 	color: inherit;
 }
 
-#other-one {
-	width: 100%;
-	height: 220px;
-}
-
 .other-image {
 	float: left;
 	min-height: 200px;
@@ -165,10 +160,6 @@
 		width: 95%;
 	}
 
-	#other-one {
-		height: 200px;
-	}
-
 	.other-image {
 		height: 200px;
 	}
@@ -181,10 +172,8 @@
 @media screen and (max-width: 450px) {
 	.other-articles-container {
 		height: auto;
-	}
-
-	#other-one {
-		height: auto;
+		padding: 15px;
+		box-sizing: border-box;
 	}
 
 	.other-image {
@@ -206,12 +195,4 @@
 	.other-author {
 		margin-top: 10px;
 	}
-}
-
-#other-one .other-image {
-	background-image: url("../Images/interiitsport2017.jpg");
-}
-
-#other-two .other-image {
-	background-image: url("../Images/1st-senate-meeting.jpg");
 }

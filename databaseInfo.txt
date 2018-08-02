@@ -1,0 +1,11 @@
+id
+author
+title
+designation
+author_image
+date
+description
+article_image
+category
+tags
+num_of_visitors

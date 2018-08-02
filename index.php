@@ -1,3 +1,15 @@
+<?php
+$servername = "localhost";
+$username = "gv";
+$password = "Iitgoa$$$777";
+$db_name = "gurukulVarta";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password,$db_name);
+
+$recent_query = "SELECT * FROM articles ORDER BY id DESC LIMIT 8";
+$recent_result = mysqli_query($conn,$recent_query);
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -61,84 +73,84 @@
 				</div>
 				<div class="trending-articles-container">
 					<div class="image" id="one">
-						<div class="color">
+						<a href="article.php?type=trending&id=1"><div class="color">
 							<div class="header">
 								<h3>1st Senate Meeting</h3>
 								<p>Know More </p>
 							</div>
-						</div>
+						</div></a>
 					</div>
 
 					<div class="image" id="two">
-						<div class="color">
+						<a href="article.php?type=trending&id=2"><div class="color">
 							<div class="header">
 								<h3>3rd Generation IIT Director Meet</h3>
 								<p>Know More </p>
 							</div>
-						</div>
+						</div></a>
 					</div>
 
 					<div class="image" id="three">
-						<div class="color">
+						<a href="article.php?type=trending&id=3"><div class="color">
 							<div class="header">
 								<h3>Goa Atlantic Summit</h3>
 								<p>Know More </p>
 							</div>
-						</div>
+						</div></a>
 					</div>
 
 					<div class="image" id="four">
-						<div class="color">
+						<a href="article.php?type=trending&id=4"><div class="color">
 							<div class="header">
 								<h3>Goa Liberation Day</h3>
 								<p>Know More </p>
 							</div>
-						</div>
+						</div></a>
 					</div>
 
 					<div class="image" id="five">
-						<div class="color">
+						<a href="article.php?type=trending&id=5"><div class="color">
 							<div class="header">
 								<h3>GOAT Cooperation Meet</h3>
 								<p>Know More </p>
 							</div>
-						</div>
+						</div></a>
 					</div>
 
 					<div class="image" id="six">
-						<div class="color">
+						<a href="article.php?type=trending&id=6"><div class="color">
 							<div class="header">
 								<h3>IIT Goa Logo Unvieled</h3>
 								<p>Know More</p>
 							</div>
-						</div>
+						</div></a>
 					</div>
 
 					<div class="image" id="seven">
-						<div class="color">
+						<a href="article.php?type=trending&id=7"><div class="color">
 							<div class="header">
 								<h3>Inter IIT Sports Meet 2k17</h3>
 								<p>Know More </p>
 							</div>
-						</div>
+						</div></a>
 					</div>
 
 					<div class="image" id="eight">
-						<div class="color">
+						<a href="article.php?type=trending&id=8"><div class="color">
 							<div class="header">
 								<h3>IPS Summit</h3>
 								<p>Know More </p>
 							</div>
-						</div>
+						</div></a>
 					</div>
 
 					<div class="image" id="nine">
-						<div class="color">
+						<a href="article.php?type=trending&id=9"><div class="color">
 							<div class="header">
 								<h3>National Unity Day</h3>
 								<p>Know More </p>
 							</div>
-						</div>
+						</div></a>
 					</div>
 				</div>
 
@@ -148,121 +160,131 @@
 
 				<div class="recent-article-container">
 					<div id="container-left">
+
+						<?php $row = mysqli_fetch_assoc($recent_result); ?>					
 						<div id="recent-one">
-							<div class="recent-image">
-								
-							</div>
+							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="2nd-senate-meeting.html"> <div class="recent-title">
-									2nd Senate Meeting
-								</div></a>
+								<a href="article.php?type=recent&id=1">
+									<div class="recent-title">
+										<?php echo $row['title']; ?>
+									</div>
+								</a>
 								<div class="category">
-									Insti News
+									<?php echo $row['category']; ?>
 								</div>	
 							</div>
 						</div>
 						
+						<?php $row = mysqli_fetch_assoc($recent_result); ?>					
 						<div id="recent-two">
-							<div class="recent-image">
-								
-							</div>
+							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="#"> <div class="recent-title">
-									Trial Version
-								</div></a>
+								<a href="article.php?type=recent&id=2">
+									<div class="recent-title">
+										<?php echo $row['title']; ?>
+									</div>
+								</a>
 								<div class="category">
-									Trial
+									<?php echo $row['category']; ?>
 								</div>	
 							</div>
 						</div>
 
+						<?php $row = mysqli_fetch_assoc($recent_result); ?>
 						<div id="recent-three">
-							<div class="recent-image">
-								
-							</div>
+							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="#"> <div class="recent-title">
-									Trial Version
-								</div></a>
+								<a href="article.php?type=recent&id=3"> 
+									<div class="recent-title">
+										<?php echo $row['title']; ?>
+									</div>
+								</a>
 								<div class="category">
-									Trial
+									<?php echo $row['category']; ?>
 								</div>	
 							</div>
 						</div>
 
+						<?php $row = mysqli_fetch_assoc($recent_result); ?>
 						<div id="recent-four">
-							<div class="recent-image">
-								
-							</div>
+							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="#"> <div class="recent-title">
-									Trial Version
-								</div></a>
+								<a href="article.php?type=recent&id=4"> 
+									<div class="recent-title">
+										<?php echo $row['title']; ?>
+									</div>
+								</a>
 								<div class="category">
-									Trial
+									<?php echo $row['category']; ?>
 								</div>	
 							</div>
 						</div>
 					</div>
 
 					<div id="container-right">
-
+						<?php $row = mysqli_fetch_assoc($recent_result); ?>
 						<div id="recent-five">
-							<div class="recent-image">
-								
-							</div>
+							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="#"> <div class="recent-title">
-									Trial Version
-								</div></a>
+								<a href="article.php?type=recent&id=5"> 
+									<div class="recent-title">
+										<?php echo $row['title']; ?>
+									</div>
+								</a>
 								<div class="category">
-									Trial
+									<?php echo $row['category']; ?>
 								</div>	
 							</div>
 						</div>
 
+						<?php $row = mysqli_fetch_assoc($recent_result); ?>
 						<div id="recent-six">
-							<div class="recent-image">
-								
-							</div>
+							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="#"> <div class="recent-title">
-									Trial Version
-								</div></a>
+								<a href="article.php?type=recent&id=6"> 
+									<div class="recent-title">
+										<?php echo $row['title']; ?>
+									</div>
+								</a>
 								<div class="category">
-									Trial
+									<?php echo $row['category']; ?>
 								</div>	
 							</div>
 						</div>
 
+						<?php $row = mysqli_fetch_assoc($recent_result); ?>
 						<div id="recent-seven">
-							<div class="recent-image">
-								
-							</div>
+							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="#"> <div class="recent-title">
-									Trial Version
-								</div></a>
+								<a href="article.php?type=recent&id=7"> 
+									<div class="recent-title">
+										<?php echo $row['title']; ?>
+									</div>
+								</a>
 								<div class="category">
-									Trial
+									<?php echo $row['category']; ?>
 								</div>	
 							</div>
 						</div>
 
+						<?php $row = mysqli_fetch_assoc($recent_result); ?>
 						<div id="recent-eight">
-							<div class="recent-image">
-								
-							</div>
+							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="#"> <div class="recent-title">
-									Trial Version
-								</div></a>
+								<a href="article.php?type=recent&id=8"> 
+									<div class="recent-title">
+										<?php echo $row['title']; ?>
+									</div>
+								</a>
 								<div class="category">
-									Trial
+									<?php echo $row['category']; ?>
 								</div>	
 							</div>
 						</div>
+
 					</div>
+
 				</div>
 			</div>
 		
