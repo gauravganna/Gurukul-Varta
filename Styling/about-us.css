@@ -20,7 +20,7 @@ div.leftSide h3 {
 }
 
 div.leftSide a {
-	color: blue;
+	color: #f27d0c;
 	cursor: pointer;
 }
 
@@ -32,4 +32,26 @@ div.leftSide a {
 	.leftSide {
 		padding: 0px;
 	}
+}
+
+.about-us-container {
+	width: 270px;
+	height: auto;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.about-us-container img {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	border: red 1px solid;
+}
+
+.about-us-container h2 {
+	color: #344449;
+}
+
+.email {
+	color: #5c696d; 
 }

@@ -1,3 +1,14 @@
+<?php
+$servername = "localhost";
+$username = "gv";
+$password = "Iitgoa$$$777";
+$dbname = "gurukulVarta";
+
+// Create connection
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -24,30 +35,77 @@
 
 				<header>Our Team</header>
 				<h3>2018-2019</h3>
-				<h3><u>Chief Editor</u></h3>
-				<h3><a>Neha Shah </a>| neha.shah.16002@iitgoa.ac.in</h3> 
-				<br>
+				<div style="display: flex; width: 100%; flex-wrap: wrap; justify-content: space-around;">
+					<div class="about-us-container" >
+						<br><h2><u>Chief Editor</u></h2>
+						<br><br>
+						<a><img src="AuthorImage/">
+						<br/>
+						<h3>Neha Shah </a></h3>
+						<h3 class="email">neha.shah.16002@iitgoa.ac.in</h3> 
+					</div>
 
-				<h3><u>Chief Publisher</u></h3>
-				<h3><a>Sahaj Jain </a>| sahaj.jain.16003@iitgoa.ac.in</h3>
-				<br>
+					<div class="about-us-container" >
+						<br><h2><u>Chief Publisher/<br>Design &amp; Layout</u></h2>
+						<br>
+						<a><img src="AuthorImage/">
+						<br/>
+						<h3>Sahaj Jain</a></h3>
+						<h3 class="email">sahaj.jain.16003@iitgoa.ac.in</h3> 
+					</div>
 
-				<h3><u>Editors</u></h3>
-				<h3><a>Vishal Jha </a>| vishal.jha.16001@iitgoa.ac.in</h3> 
-				<br>
+					<div class="about-us-container" >
+						<br><h2><u>Editor</u></h2>
+						<br><br>
+						<a><img src="AuthorImage/">
+						<br/>
+						<h3>Vishal Jha</a></h3>
+						<h3 class="email">vishal.jha.16001@iitgoa.ac.in</h3> 
+					</div>
 
-				<h3><u>Faculty Advisors</u></h3>
-				<h3><a>Dr. Rishikesh Sharma </a>| rishi@iitgoa.ac.in</h3>
-				<h3><a>Dr. Nida Sajid </a>| nida@iitgoa.ac.in</h3>
-				<br>
-				
-				<h3><u>Design and Layout</u></h3>
-				<h3><a>Noopur Datar </a>| noopur.datar.17002@iitgoa.ac.in</h3>
-				<h3><a>Sahaj Jain </a>| sahaj.jain.16003@iitgoa.ac.in</h3>
-				<br>
-				<h3><u>Website Design</u></h3>
-				<h3><a>Gaurav Ganna </a>| gaurav.ganna.16001@iitgoa.ac.in</h3>
-				<h3><a>Pankaj Katkar </a>| pankaj.katkar.16001@iitgoa.ac.in</h3>
+					<div class="about-us-container" >
+						<br><h2><u>Faculty Advisor</u></h2>
+						<br>
+						<a><img src="AuthorImage/">
+						<br/>
+						<h3>Dr. Rishikesh Narayan</a></h3>
+						<h3 class="email">rishikesh.narayan@iitgoa.ac.in</h3> 
+					</div>
+
+					<div class="about-us-container" >
+						<br><h2><u>Faculty Advisor</u></h2>
+						<br>
+						<a><img src="AuthorImage/">
+						<br/>
+						<h3>Dr. Nida Sajid</a></h3>
+						<h3 class="email">nida@iitgoa.ac.in</h3> 
+					</div>
+
+					<div class="about-us-container" >
+						<br><h2><u>Design &amp; Layout</u></h2>
+						<br>
+						<a><img src="AuthorImage/">
+						<br/>
+						<h3>Noopur Datar</a></h3>
+						<h3 class="email">noopur.datar.17002@iitgoa.ac.in</h3> 
+					</div>
+					<div class="about-us-container" >
+						<br><h2><u>Website Design</u></h2>
+						<br>
+						<a href="https://www.facebook.com/gaurav10498" target="_blank"><img src="AuthorImage/GauravGanna.jpg">
+						<br/>
+						<h3>Gaurav Ganna</a></h3>
+						<h3 class="email">gaurav.ganna.16001@iitgoa.ac.in</h3> 
+					</div>
+					<div class="about-us-container" >
+						<br><h2><u>Website Design</u></h2>
+						<br>
+						<a><img src="AuthorImage/">
+						<br/>
+						<h3>Pankaj Katkar</a></h3>
+						<h3 class="email">pankaj.katkar.16001@iitgoa.ac.in</h3> 
+					</div>
+				</div>
 			</div>
 
 			<?php require 'Template/template-aside.php'; ?>

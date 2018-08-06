@@ -1,3 +1,26 @@
+<script type="text/javascript">
+	function validateEmail(){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200){
+				if(this.responseText == "OK") {
+					document.getElementById("displayOnValidation").innerHTML = "Your Email has been subscribed!!";
+					document.getElementById("displayOnValidation").style.display = "block";
+					document.getElementById("emailform").style.display = "none";
+				}
+				else {
+					document.getElementById("displayOnValidation").innerHTML = "Please enter a valid Email address!!";
+					document.getElementById("displayOnValidation").style.display = "block";
+					document.getElementById("emailbox").value = "";
+				}
+			}
+		}
+		
+		xhttp.open("GET", "validateEmail.php?Email=" + document.getElementById("emailbox").value, true);
+    	xhttp.send();
+	}
+</script>
+
 <?php
 
 $query = "SELECT * FROM articles ORDER BY num_of_visitors DESC,`date` ASC";
@@ -16,11 +39,12 @@ $result = mysqli_query($conn,$query);
 						Email Subscription
 					</div>
 					<div class="email-subscription-container">
-						<form>
+						<form autocomplete="off" id="emailform">
 							<p>Email : </p>
-							<input type="text" name="Email" placeholder="abc@xyz.com">
-							<input type="submit" value="Submit">
+							<input type="text" id="emailbox" name="Email" placeholder="abc@xyz.com">
+							<button type="button" onclick="validateEmail()">Submit</button>
 						</form>
+							<p id="displayOnValidation" style="display: none;"></p>
 					</div>
 				</div>
 

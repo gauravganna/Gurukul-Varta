@@ -72,7 +72,7 @@
 	box-sizing: border-box;
 }
 
-.email-subscription-container input[type=submit] {
+.email-subscription-container button[type=button] {
 	margin: 10px 4px;
 	font-size: 16px; 
 	color: #fff;
