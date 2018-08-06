@@ -1,3 +1,14 @@
+<?php
+$servername = "localhost";
+$username = "gv";
+$password = "Iitgoa$$$777";
+$db_name = "gurukulVarta";
+
+$array = preg_split('/\s+/',preg_replace("/[^A-Za-z0-9 ]/", '', $_GET['search']));
+
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>

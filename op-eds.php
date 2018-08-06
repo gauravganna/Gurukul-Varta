@@ -20,7 +20,7 @@
 				Coming Soon		
 			</div>
 			
-			<?php require 'Template/template-aside.html'; ?>
+			<?php require 'Template/template-aside.php'; ?>
 		</div>
 	</section>
 

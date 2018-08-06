@@ -51,7 +51,7 @@
 					<a href="http://www.iitgoa.ac.in/pdf/newsletter/%E0%A4%85%E0%A4%95%E0%A5%8D%E0%A4%9F%E0%A5%82%E0%A4%AC%E0%A4%B0_2017.pdf" target="_blank">Hindi Version</a>
 				</div>
 			</div>
-			<?php require 'Template/template-aside.html'; ?>
+			<?php require 'Template/template-aside.php'; ?>
 		</div>
 
 

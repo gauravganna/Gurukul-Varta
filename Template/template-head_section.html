@@ -27,7 +27,7 @@
 	<!-- Include JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script >
-		
+	
 		$(document).ready(function(){
 			/* The following function switches bar and cross and displays unordered list when bar is clicked*/
 			$(".hamburger-btn .fa-window-close-o").hide();
@@ -36,6 +36,7 @@
 				$(this).hide();
 				$(".hamburger-btn .fa-window-close-o").show();
 				$("section.mainBody").addClass("active");
+				$("nav.mobile ul").slideDown();
 				$("nav.mobile ul").addClass("active");
 			});
 
@@ -43,8 +44,29 @@
 				$(this).hide();
 				$(".hamburger-btn .fa-bars").show();
 				$("section.mainBody").removeClass("active");
+				$("nav.mobile ul").slideUp();
 				$("nav.mobile ul").removeClass("active");
 			});
+
+			/*The following part gives the sliding effect*/
+			var slideIndex = 0;
+			carousel();
+
+			function carousel(){
+				var x = document.getElementsByClassName("mainArticle");
+				var y = document.getElementsByClassName("dot");
+				for(var i=0;i<x.length;i++){
+					x[i].style.display = "none";
+					y[i].style.backgroundColor = "#ff9f80";
+				}
+				slideIndex++;
+				if( slideIndex > x.length ){ 
+					slideIndex = 1;
+				}
+				x[slideIndex-1].style.display = "flex";
+				y[slideIndex-1].style.backgroundColor = "#f27d0c";
+				setTimeout(carousel,3000);
+			}
 		});
 
 	</script>

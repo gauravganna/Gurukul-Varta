@@ -8,6 +8,12 @@ $conn = mysqli_connect($servername, $username, $password,$db_name);
 
 $recent_query = "SELECT * FROM articles ORDER BY id DESC LIMIT 8";
 $recent_result = mysqli_query($conn,$recent_query);
+
+//For Trending Articles Within a Time Range.
+//Window period of 4 month
+$trending_query = "SELECT * FROM articles WHERE `date` BETWEEN CURDATE() - INTERVAL 120 DAY AND CURDATE() ORDER BY num_of_visitors DESC,`date` ASC";
+$trending_result = mysqli_query($conn,$trending_query);
+
 ?>
 
 <!DOCTYPE HTML>
@@ -72,87 +78,97 @@ $recent_result = mysqli_query($conn,$recent_query);
 					Trending Article
 				</div>
 				<div class="trending-articles-container">
-					<div class="image" id="one">
+					<?php $trending_row = mysqli_fetch_assoc($trending_result); ?>
+					<div class="image" style="background-image: url(Images/<?php echo $trending_row['article_image']; ?>); " id="one">
 						<a href="article.php?type=trending&id=1"><div class="color">
 							<div class="header">
-								<h3>1st Senate Meeting</h3>
+								<h3><?php echo $trending_row['title']; ?></h3>
 								<p>Know More </p>
 							</div>
 						</div></a>
 					</div>
 
-					<div class="image" id="two">
+					<?php $trending_row = mysqli_fetch_assoc($trending_result); ?>
+					<div class="image" style="background-image: url(Images/<?php echo $trending_row['article_image']; ?>); " id="two">
 						<a href="article.php?type=trending&id=2"><div class="color">
 							<div class="header">
-								<h3>3rd Generation IIT Director Meet</h3>
+								<h3><?php echo $trending_row['title']; ?></h3>
 								<p>Know More </p>
 							</div>
 						</div></a>
 					</div>
-
-					<div class="image" id="three">
+					
+					<?php $trending_row = mysqli_fetch_assoc($trending_result); ?>
+					<div class="image" style="background-image: url(Images/<?php echo $trending_row['article_image']; ?>); " id="three">
 						<a href="article.php?type=trending&id=3"><div class="color">
 							<div class="header">
-								<h3>Goa Atlantic Summit</h3>
+								<h3><?php echo $trending_row['title']; ?></h3>
 								<p>Know More </p>
 							</div>
 						</div></a>
 					</div>
-
-					<div class="image" id="four">
+					
+					<?php $trending_row = mysqli_fetch_assoc($trending_result); ?>
+					<div class="image" style="background-image: url(Images/<?php echo $trending_row['article_image']; ?>); " id="four">
 						<a href="article.php?type=trending&id=4"><div class="color">
 							<div class="header">
-								<h3>Goa Liberation Day</h3>
+								<h3><?php echo $trending_row['title']; ?></h3>
 								<p>Know More </p>
 							</div>
 						</div></a>
 					</div>
-
-					<div class="image" id="five">
+					
+					<?php $trending_row = mysqli_fetch_assoc($trending_result); ?>
+					<div class="image" style="background-image: url(Images/<?php echo $trending_row['article_image']; ?>); " id="five">
 						<a href="article.php?type=trending&id=5"><div class="color">
 							<div class="header">
-								<h3>GOAT Cooperation Meet</h3>
+								<h3><?php echo $trending_row['title']; ?></h3>
 								<p>Know More </p>
 							</div>
 						</div></a>
 					</div>
-
-					<div class="image" id="six">
+					
+					<?php $trending_row = mysqli_fetch_assoc($trending_result); ?>
+					<div class="image" style="background-image: url(Images/<?php echo $trending_row['article_image']; ?>); " id="six">
 						<a href="article.php?type=trending&id=6"><div class="color">
 							<div class="header">
-								<h3>IIT Goa Logo Unvieled</h3>
+								<h3><?php echo $trending_row['title']; ?></h3>
 								<p>Know More</p>
 							</div>
 						</div></a>
 					</div>
-
-					<div class="image" id="seven">
+					
+					<?php $trending_row = mysqli_fetch_assoc($trending_result); ?>
+					<div class="image" style="background-image: url(Images/<?php echo $trending_row['article_image']; ?>); " id="seven">
 						<a href="article.php?type=trending&id=7"><div class="color">
 							<div class="header">
-								<h3>Inter IIT Sports Meet 2k17</h3>
+								<h3><?php echo $trending_row['title']; ?></h3>
 								<p>Know More </p>
 							</div>
 						</div></a>
 					</div>
-
-					<div class="image" id="eight">
+					
+					<?php $trending_row = mysqli_fetch_assoc($trending_result); ?>
+					<div class="image" style="background-image: url(Images/<?php echo $trending_row['article_image']; ?>); " id="eight">
 						<a href="article.php?type=trending&id=8"><div class="color">
 							<div class="header">
-								<h3>IPS Summit</h3>
+								<h3><?php echo $trending_row['title']; ?></h3>
+								<p>Know More </p>
+							</div>
+						</div></a>
+					</div>
+					
+					<?php $trending_row = mysqli_fetch_assoc($trending_result); ?>
+					<div class="image" style="background-image: url(Images/<?php echo $trending_row['article_image']; ?>); " id="nine">
+						<a href="article.php?type=trending&id=9"><div class="color">
+							<div class="header">
+								<h3><?php echo $trending_row['title']; ?></h3>
 								<p>Know More </p>
 							</div>
 						</div></a>
 					</div>
 
-					<div class="image" id="nine">
-						<a href="article.php?type=trending&id=9"><div class="color">
-							<div class="header">
-								<h3>National Unity Day</h3>
-								<p>Know More </p>
-							</div>
-						</div></a>
-					</div>
-				</div>
+				</div>					
 
 				<div class="recent-article-header">
 					Recent
@@ -165,7 +181,7 @@ $recent_result = mysqli_query($conn,$recent_query);
 						<div id="recent-one">
 							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="article.php?type=recent&id=1">
+								<a href="article.php?type=recent&id=<?php echo $row['id']; ?>">
 									<div class="recent-title">
 										<?php echo $row['title']; ?>
 									</div>
@@ -180,7 +196,7 @@ $recent_result = mysqli_query($conn,$recent_query);
 						<div id="recent-two">
 							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="article.php?type=recent&id=2">
+								<a href="article.php?type=recent&id=<?php echo $row['id']; ?>">
 									<div class="recent-title">
 										<?php echo $row['title']; ?>
 									</div>
@@ -195,7 +211,7 @@ $recent_result = mysqli_query($conn,$recent_query);
 						<div id="recent-three">
 							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="article.php?type=recent&id=3"> 
+								<a href="article.php?type=recent&id=<?php echo $row['id']; ?>"> 
 									<div class="recent-title">
 										<?php echo $row['title']; ?>
 									</div>
@@ -210,7 +226,7 @@ $recent_result = mysqli_query($conn,$recent_query);
 						<div id="recent-four">
 							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="article.php?type=recent&id=4"> 
+								<a href="article.php?type=recent&id=<?php echo $row['id']; ?>"> 
 									<div class="recent-title">
 										<?php echo $row['title']; ?>
 									</div>
@@ -227,7 +243,7 @@ $recent_result = mysqli_query($conn,$recent_query);
 						<div id="recent-five">
 							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="article.php?type=recent&id=5"> 
+								<a href="article.php?type=recent&id=<?php echo $row['id']; ?>"> 
 									<div class="recent-title">
 										<?php echo $row['title']; ?>
 									</div>
@@ -242,7 +258,7 @@ $recent_result = mysqli_query($conn,$recent_query);
 						<div id="recent-six">
 							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="article.php?type=recent&id=6"> 
+								<a href="article.php?type=recent&id=<?php echo $row['id']; ?>"> 
 									<div class="recent-title">
 										<?php echo $row['title']; ?>
 									</div>
@@ -257,7 +273,7 @@ $recent_result = mysqli_query($conn,$recent_query);
 						<div id="recent-seven">
 							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="article.php?type=recent&id=7"> 
+								<a href="article.php?type=recent&id=<?php echo $row['id']; ?>"> 
 									<div class="recent-title">
 										<?php echo $row['title']; ?>
 									</div>
@@ -272,7 +288,7 @@ $recent_result = mysqli_query($conn,$recent_query);
 						<div id="recent-eight">
 							<div class="recent-image" style="background-image: url(Images/<?php echo $row['article_image']; ?>); "></div>
 							<div class="recent-brief">
-								<a href="article.php?type=recent&id=8"> 
+								<a href="article.php?type=recent&id=<?php echo $row['id']; ?>"> 
 									<div class="recent-title">
 										<?php echo $row['title']; ?>
 									</div>
@@ -288,7 +304,7 @@ $recent_result = mysqli_query($conn,$recent_query);
 				</div>
 			</div>
 		
-		<?php require 'Template/template-aside.html'; ?>
+		<?php require 'Template/template-aside.php'; ?>
 		</div>
 	</section>
 

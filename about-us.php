@@ -50,7 +50,7 @@
 				<h3><a>Pankaj Katkar </a>| pankaj.katkar.16001@iitgoa.ac.in</h3>
 			</div>
 
-			<?php require 'Template/template-aside.html'; ?>
+			<?php require 'Template/template-aside.php'; ?>
 		</div>
 	</section>
 

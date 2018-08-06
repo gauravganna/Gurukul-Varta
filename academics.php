@@ -65,7 +65,7 @@ $result = mysqli_query($conn,$query);
 				</div>		
 			</div>
 			
-			<?php require 'Template/template-aside.html'; ?>
+			<?php require 'Template/template-aside.php'; ?>
 		</div>
 	</section>
 
